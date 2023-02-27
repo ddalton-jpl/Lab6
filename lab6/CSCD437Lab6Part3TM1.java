@@ -16,13 +16,13 @@ public class CSCD437Lab6Part3TM1 {
       CSCD437Crypto tm1Crypto = new CSCD437Crypto("SHA256withRSA", "RSA", 1024);
       
       // Alice publishes the public key 
-      tm1Crypto.publishPublicKey("alice.asc");
+      tm1Crypto.publishPublicKey("teamMember1.asc");
             
       // Bob creates public and private keys using a Java defined algorithm
       CSCD437Crypto tm2Crypto = new CSCD437Crypto("SHA256withRSA", "RSA", 1024);
       
       // Bob downloads Alice's public key 
-      PublicKey tm1Key = CSCD437Crypto.getPublicKey("alice.asc");
+      PublicKey tm1Key = CSCD437Crypto.getPublicKey("teamMember1.asc");
             
       // Bob encrypts a message to Alice
       tm2Crypto.encrypt(tm1Key, "RSA/ECB/PKCS1Padding", "this is a test", "message.enc");
